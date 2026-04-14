@@ -1,0 +1,22 @@
+# Obsidian
+.obsidian/workspace*
+.obsidian/cache
+.obsidian/plugins/*/data.json
+
+# System
+.DS_Store
+.smtcmp_json_db/
+.smtcmp_vector_db.tar.gz
+
+# Never track fleeting (double protection)
+fleeting/
+0 fleeting/
+
+# graphify cache
+graphify-out/cache/
+
+# Large binaries
+*.tar.gz
+raw/assets/*.png
+raw/assets/*.jpg
+raw/assets/*.pdf
