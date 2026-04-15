@@ -23,11 +23,16 @@
 │   └── assets/                 # 로컬 이미지·첨부파일
 ├── fleeting/                   # 개인 스크래치패드 — LLM 완전 차단
 │   └── _template.md            # 플리팅 노트 템플릿
-├── wiki/                       # graphify + LLM이 자동 생성
-│   ├── GRAPH_REPORT.md         # graphify 생성 — 항상 이 파일부터 읽기
-│   ├── graph.html              # 인터랙티브 시각화
+├── graphify-out/               # graphify 파이프라인 원본 출력 (자동 생성)
+│   ├── GRAPH_REPORT.md         # 그래프 리포트 원본
+│   ├── graph.html              # 인터랙티브 시각화 (브라우저에서 열기)
 │   ├── graph.json              # 기계 판독 그래프 데이터
-│   ├── obsidian/               # graphify --obsidian 생성 마크다운
+│   ├── cache/                  # 추출 캐시 (재실행 속도 향상)
+│   └── obsidian/               # --obsidian 플래그 사용 시 생성
+├── wiki/                       # graphify-out/에서 복사 + LLM 분석 결과
+│   ├── GRAPH_REPORT.md         # graphify-out/에서 동기화 — LLM이 읽는 용
+│   ├── graph.json              # graphify-out/에서 동기화
+│   ├── obsidian/               # graphify-out/obsidian/ 동기화
 │   │   └── index.md            # Obsidian 진입점
 │   └── analyses/               # 사용자 질의 결과 (LLM이 수동으로 저장)
 └── docs/
@@ -75,8 +80,10 @@ Expected: `pip 24.x.x from ...python3.11...`
 ## Task 2: graphifyy 설치 및 Claude Code 통합
 
 **Files:**
-- Create/Modify: `CLAUDE.md` (graphify install이 자동 생성)
-- Modify: `~/.claude/settings.json` (PreToolUse hook 자동 추가)
+- Modify: `~/.claude/CLAUDE.md` (graphify install이 전역 설정에 자동 추가)
+
+> **주의:** `graphify install`은 vault의 `CLAUDE.md`가 아닌 `~/.claude/CLAUDE.md`(전역)에 씁니다.
+> vault의 `CLAUDE.md`는 Task 4에서 별도로 새로 작성합니다.
 
 - [ ] **Step 1: graphifyy 설치**
 
@@ -109,29 +116,22 @@ Expected: `/Users/<user>/Library/Python/3.11/bin/graphify` 또는 유사 경로
 cd ~/Library/CloudStorage/OneDrive-개인/문서/Obsidian/2nd_brain
 ```
 
-- [ ] **Step 4: graphify install 실행 (CLAUDE.md + hook 자동 설치)**
+- [ ] **Step 4: graphify install 실행 (전역 CLAUDE.md 등록)**
 
 ```bash
 graphify install
 ```
 
-Expected: CLAUDE.md에 graphify 섹션 추가됨, Claude Code settings에 PreToolUse hook 등록됨.
+Expected: `~/.claude/CLAUDE.md`에 graphify 섹션 추가됨.
+> vault의 `CLAUDE.md`는 건드리지 않음 — Task 4에서 별도 작성.
 
-- [ ] **Step 5: hook 등록 확인**
-
-```bash
-cat ~/.claude/settings.json | grep -A5 "graphify"
-```
-
-Expected: PreToolUse hook 항목 존재
-
-- [ ] **Step 6: graphify install로 생성된 CLAUDE.md 확인**
+- [ ] **Step 5: 설치 확인**
 
 ```bash
-cat CLAUDE.md
+cat ~/.claude/CLAUDE.md | grep graphify
 ```
 
-내용 확인 후 Task 4에서 커스텀 규칙 추가할 것.
+Expected: `graphify` 관련 라인 존재
 
 ---
 
@@ -159,7 +159,7 @@ cat > wiki/GRAPH_REPORT.md << 'EOF'
 # Graph Report
 
 > **상태:** 아직 graphify를 실행하지 않았습니다.
-> 첫 소스를 `raw/`에 추가한 뒤 `/graphify ./raw --obsidian --obsidian-dir ./wiki`를 실행하세요.
+> 첫 소스를 `raw/`에 추가한 뒤 Claude Code에서 "graphify 실행해줘"라고 요청하세요.
 
 ## 현재 소스 수
 0개
@@ -176,7 +176,7 @@ mkdir -p wiki/obsidian
 cat > wiki/obsidian/index.md << 'EOF'
 # Wiki Index
 
-> graphify 실행 전입니다. `raw/`에 소스를 추가한 뒤 `/graphify ./raw --obsidian --obsidian-dir ./wiki`를 실행하세요.
+> graphify 실행 전입니다. `raw/`에 소스를 추가한 뒤 Claude Code에서 "graphify 실행해줘"라고 요청하세요.
 EOF
 ```
 
@@ -199,21 +199,15 @@ Expected:
 ## Task 4: CLAUDE.md 커스텀 규칙 추가
 
 **Files:**
-- Modify: `CLAUDE.md` (graphify install 생성본에 커스텀 규칙 추가)
+- Create: `CLAUDE.md` (vault 전용 규칙 파일 — graphify와 무관하게 새로 작성)
 
-`graphify install`이 생성한 섹션 아래에 다음 규칙을 추가한다.
-기존 graphify 섹션은 절대 삭제하지 않는다.
+> `graphify install`은 `~/.claude/CLAUDE.md`(전역)에만 씁니다.
+> vault의 CLAUDE.md는 아래 내용을 새 파일로 작성합니다.
 
-- [ ] **Step 1: 현재 CLAUDE.md 끝 확인**
-
-```bash
-tail -5 CLAUDE.md
-```
-
-- [ ] **Step 2: 커스텀 규칙 섹션 추가**
+- [ ] **Step 1: vault CLAUDE.md 신규 작성**
 
 ```bash
-cat >> CLAUDE.md << 'RULES'
+cat > CLAUDE.md << 'RULES'
 
 ---
 
@@ -263,7 +257,7 @@ cat >> CLAUDE.md << 'RULES'
 RULES
 ```
 
-- [ ] **Step 3: 추가 내용 확인**
+- [ ] **Step 2: 작성 내용 확인**
 
 ```bash
 grep -n "fleeting" CLAUDE.md
@@ -378,7 +372,7 @@ cat > raw/README.md << 'EOF'
 # Raw Sources
 
 불변 원본 소스. LLM은 읽기만 하며 절대 수정하지 않는다.
-새 소스 추가 후 `/graphify ./raw --obsidian --obsidian-dir ./wiki`를 실행하면 wiki/가 업데이트된다.
+새 소스 추가 후 Claude Code에서 "graphify 실행해줘"라고 요청하면 wiki/가 업데이트된다.
 
 ## 명명 규칙
 
@@ -421,9 +415,14 @@ cat raw/README.md | head -10
 
 Karpathy LLM Wiki Gist를 첫 소스로 사용해 전체 파이프라인을 검증한다.
 
+> **graphify 실행 방법:** `graphify` CLI는 파이프라인 실행 명령이 없음.
+> `/graphify`는 Claude Code 스킬 문법 — Claude Code에 자연어로 "graphify 실행해줘" 요청.
+> 모든 출력은 `graphify-out/`에 생성되며, 필요한 파일을 `wiki/`로 복사.
+
 **Files:**
 - Create: `raw/articles/2026-04-15-karpathy-llm-wiki.md`
-- Modify: `wiki/` (graphify가 자동 생성)
+- Create: `graphify-out/` (파이프라인 자동 생성)
+- Modify: `wiki/` (graphify-out/에서 복사)
 
 - [ ] **Step 1: 첫 소스 다운로드**
 
@@ -434,7 +433,7 @@ curl -s "https://gist.githubusercontent.com/karpathy/442a6bf555914893e9891c11519
 echo "Lines: $(wc -l < raw/articles/2026-04-15-karpathy-llm-wiki.md)"
 ```
 
-Expected: `Lines: 130` 내외
+Expected: `Lines: 75` 내외
 
 - [ ] **Step 2: Claude Code에서 graphify 실행 요청**
 
@@ -443,60 +442,51 @@ Claude Code 세션에서:
 graphify 실행해줘
 ```
 
-Claude Code는 확인 메시지를 출력해야 함:
+Claude Code가 확인 메시지 출력:
 > "Graphify를 실행하면 wiki/가 업데이트됩니다. 진행할까요?"
 
-"예" 응답 후 실행됨.
+"예" 응답 → Claude Code가 SKILL.md Step 1~6 파이프라인 전체 실행.
 
-- [ ] **Step 3: 터미널에서 직접 graphify 실행 (Claude Code 없이 테스트할 경우)**
-
-```bash
-cd ~/Library/CloudStorage/OneDrive-개인/문서/Obsidian/2nd_brain
-graphify ./raw --obsidian --obsidian-dir ./wiki
-```
-
-Expected output (예시):
-```
-✓ Extracted entities from 1 file
-✓ Built knowledge graph: N nodes, M edges
-✓ Generated wiki/GRAPH_REPORT.md
-✓ Generated wiki/graph.json
-✓ Generated wiki/graph.html
-✓ Generated wiki/obsidian/ (K pages)
-```
-
-- [ ] **Step 4: 생성 파일 확인**
+- [ ] **Step 3: graphify-out/ 생성 파일 확인**
 
 ```bash
-ls wiki/
-ls wiki/obsidian/
-wc -l wiki/GRAPH_REPORT.md
+ls graphify-out/
 ```
 
 Expected:
 ```
-wiki/: GRAPH_REPORT.md  analyses/  graph.html  graph.json  obsidian/
-wiki/obsidian/: index.md  <자동생성 페이지들>.md
-GRAPH_REPORT.md: 50줄 이상
+GRAPH_REPORT.md  cache/  graph.html  graph.json  obsidian/  (또는 wiki/)
 ```
 
-- [ ] **Step 5: GRAPH_REPORT.md 내용 확인**
+- [ ] **Step 4: wiki/로 동기화**
+
+```bash
+cp graphify-out/GRAPH_REPORT.md wiki/GRAPH_REPORT.md
+cp graphify-out/graph.json wiki/graph.json
+cp -r graphify-out/obsidian/. wiki/obsidian/ 2>/dev/null || true
+```
+
+- [ ] **Step 5: graph.html 브라우저에서 확인**
+
+```bash
+open graphify-out/graph.html
+```
+
+Expected: 브라우저에서 인터랙티브 지식 그래프 열림 (노드·엣지·커뮤니티 색상 포함)
+
+- [ ] **Step 6: GRAPH_REPORT.md 내용 확인**
 
 ```bash
 head -50 wiki/GRAPH_REPORT.md
 ```
 
-Expected: 그래프 커뮤니티, 노드 수, 엣지 수, 주요 엔티티 요약 포함
+Expected: 커뮤니티 레이블, 노드 수, 엣지 수, god nodes, 추천 질문 포함
 
-- [ ] **Step 6: Obsidian에서 그래프 확인**
+- [ ] **Step 7: Obsidian에서 그래프 확인**
 
-Obsidian 재시작 또는 vault reload 후:
+Obsidian 재시작 후:
 1. `wiki/obsidian/index.md` 열기
-2. Graph View (Cmd+G) — 생성된 링크 구조 확인
-3. `wiki/graph.html` — 브라우저에서 열어 인터랙티브 그래프 확인:
-   ```bash
-   open wiki/graph.html
-   ```
+2. Graph View (Cmd+G) — 링크 구조 확인
 
 ---
 
@@ -599,26 +589,26 @@ git status
 
 ### Spec 커버리지
 
-| 요구사항 | 구현 Task |
-|---|---|
-| 전체 폴더 구조 생성 | Task 3 |
-| Python 3.10+ (graphifyy 전제조건) | Task 1 |
-| graphify install | Task 2 |
-| CLAUDE.md — GRAPH_REPORT.md 먼저 읽기 규칙 | Task 4 |
-| CLAUDE.md — /graphify 자동실행 금지 | Task 4 |
-| CLAUDE.md — fleeting/ 완전 차단 | Task 4 |
-| CLAUDE.md — 확인 메시지 "Graphify를 실행하면..." | Task 4 |
-| AGENTS.md (CLAUDE.md 동일본) | Task 5 |
-| fleeting/ 템플릿 | Task 6 |
-| raw/ 명명 규칙 | Task 7 |
-| graphify 실행: `./raw --obsidian --obsidian-dir ./wiki` | Task 8 |
-| wiki/ 자동 생성 검증 | Task 8 |
-| analyses/ 저장 워크플로 | Task 9 |
-| Local LLM (Ollama) 안내 | Task 4 (CLAUDE.md 내 섹션) |
+| 요구사항                                                  | 구현 Task                 |
+| ----------------------------------------------------- | ----------------------- |
+| 전체 폴더 구조 생성                                           | Task 3                  |
+| Python 3.10+ (graphifyy 전제조건)                         | Task 1                  |
+| graphify install                                      | Task 2                  |
+| CLAUDE.md — GRAPH_REPORT.md 먼저 읽기 규칙                  | Task 4                  |
+| CLAUDE.md — /graphify 자동실행 금지                         | Task 4                  |
+| CLAUDE.md — fleeting/ 완전 차단                           | Task 4                  |
+| CLAUDE.md — 확인 메시지 "Graphify를 실행하면..."                | Task 4                  |
+| AGENTS.md (CLAUDE.md 동일본)                             | Task 5                  |
+| fleeting/ 템플릿                                         | Task 6                  |
+| raw/ 명명 규칙                                            | Task 7                  |
+| graphify 파이프라인 실행 및 wiki/ 동기화 | Task 8                  |
+| wiki/ 자동 생성 검증                                        | Task 8                  |
+| analyses/ 저장 워크플로                                     | Task 9                  |
+| Local LLM (Ollama) 안내                                 | Task 4 (CLAUDE.md 내 섹션) |
 
 ### 주의사항
 
 - **Python 경로**: graphify 명령이 `/opt/homebrew/bin/python3.11` 계열에 설치됨. PATH에 없으면 Task 2 Step 2 참고.
-- **graphify install의 PreToolUse hook**: 이 hook이 `/graphify` 명령을 자동으로 가로챌 수 있음. CLAUDE.md 커스텀 규칙이 이를 오버라이드해 확인 메시지를 강제함.
+- **graphify install 동작**: `~/.claude/CLAUDE.md`(전역)에만 씀. vault CLAUDE.md와 무관. PreToolUse hook은 graphify install 버그로 자동 추가 안 되며, vault CLAUDE.md 규칙으로 대체 가능하므로 추가 불필요.
 - **fleeting/ 이중 보호**: CLAUDE.md 규칙 + .gitignore 양쪽에서 차단.
 - **`0 fleeting/` vs `fleeting/`**: 현재 볼트에 `0 fleeting/` 이 존재. 스키마의 `fleeting/` 차단 규칙은 이름에 "fleeting"이 포함된 모든 폴더에 적용되도록 CLAUDE.md에 명시함.
