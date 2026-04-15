@@ -1,6 +1,6 @@
 # Personal Wiki Rules
 
-이 볼트는 Zettelkasten + Graphify 지식 그래프 + LLM 자동화 패턴으로 운영된다.
+이 볼트는 Karpathy LLM Wiki 패턴 + Graphify 지식 그래프 + LLM 자동화로 운영된다.
 
 ---
 

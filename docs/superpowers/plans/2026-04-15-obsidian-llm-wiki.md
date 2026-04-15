@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Zettelkasten + Graphify 지식 그래프 + LLM 자동화를 결합한 개인 지식 관리 Obsidian 볼트를 구축한다.
+**Goal:** Karpathy LLM Wiki 패턴 + Graphify 지식 그래프 + LLM 자동화를 결합한 개인 지식 관리 Obsidian 볼트를 구축한다.
 
 **Architecture:** `raw/` 불변 소스 → `/graphify` 실행 → `wiki/` 자동 생성(GRAPH_REPORT.md, graph.json, Obsidian 마크다운). LLM은 CLAUDE.md 스키마를 읽고 wiki를 탐색하되 graphify는 사용자 명시 요청 시에만 실행. `fleeting/`은 LLM에게 완전히 불가시.
 
@@ -247,7 +247,7 @@ cat > CLAUDE.md << 'RULES'
   ---
   ```
 
-## Obsidian Zettelkasten 통합
+## Obsidian 폴더 통합
 - `0 fleeting/` — LLM 접근 불가 (fleeting/ 차단과 동일)
 - `wiki/` — LLM이 읽고 쓰는 영역
 - `raw/` — LLM이 읽기만 하는 영역
