@@ -116,38 +116,21 @@ graphify install          # Claude Code 전역 설정 등록
 
 ---
 
-## 플랜 실행에 필요한 스킬: superpowers
+## 플랜 파일로 구축하기
 
-플랜 파일은 [superpowers](https://github.com/obra/superpowers-marketplace) 플러그인의 스킬을 사용한다.
-Claude Code에 플러그인을 설치하면 플랜을 자동으로 실행할 수 있다.
+이 시스템의 구축 플랜은 Claude Code의 [superpowers](https://github.com/obra/superpowers-marketplace) 플러그인을 이용해 작성되었다.
 
-### 설치
+```
+docs/superpowers/plans/2026-04-15-obsidian-llm-wiki.md
+```
 
-Claude Code에서 아래 명령어로 설치:
+플랜 파일을 열고 LLM에게 단계별로 요청하면 구축이 완료된다.
+superpowers 플러그인 없이 플랜을 직접 읽고 수동으로 따라해도 된다.
+
+superpowers를 설치하면 플랜 실행을 자동화할 수 있다:
 
 ```
 /plugin install superpowers@claude-plugins-official
-```
-
-설치 후 활성화:
-
-```
-/reload-plugins
-```
-
-### 플랜 실행에 사용되는 주요 스킬
-
-| 스킬 | 역할 |
-|---|---|
-| `superpowers:writing-plans` | 플랜 문서 작성 |
-| `superpowers:subagent-driven-development` | 태스크별 서브에이전트 투입 실행 |
-| `superpowers:executing-plans` | 현재 세션에서 순차 실행 |
-| `superpowers:systematic-debugging` | 오류 발생 시 체계적 디버깅 |
-
-플랜을 실행하려면 Claude Code에서:
-
-```
-execute the plan
 ```
 
 ---
