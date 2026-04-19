@@ -1,0 +1,731 @@
+{
+  "nodes": [
+    {
+      "id": "readme_raw_sources",
+      "label": "Raw Sources Directory",
+      "file_type": "document",
+      "source_file": "raw/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_naming_convention",
+      "label": "Naming Convention",
+      "file_type": "document",
+      "source_file": "raw/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_graphify_workflow",
+      "label": "Graphify Workflow",
+      "file_type": "document",
+      "source_file": "raw/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_llm_wiki",
+      "label": "LLM Wiki",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_persistent_wiki",
+      "label": "Persistent Wiki",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_rag",
+      "label": "RAG (Retrieval-Augmented Generation)",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_raw_sources",
+      "label": "Raw Sources Layer",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_wiki_layer",
+      "label": "Wiki Layer",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_schema_layer",
+      "label": "Schema Layer (CLAUDE.md / AGENTS.md)",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_ingest_operation",
+      "label": "Ingest Operation",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_query_operation",
+      "label": "Query Operation",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_lint_operation",
+      "label": "Lint Operation",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_index_md",
+      "label": "index.md (wiki index)",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_log_md",
+      "label": "log.md (chronological log)",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_obsidian",
+      "label": "Obsidian (PKM tool)",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_memex",
+      "label": "Vannevar Bush Memex",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "llmwiki_compounding_knowledge",
+      "label": "Compounding Knowledge",
+      "file_type": "document",
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Andrej Karpathy",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "label": "\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 (Harness Engineering)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "label": "AI \uc5d0\uc774\uc804\ud2b8 (AI Agent)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "label": "\ucee8\ud14d\uc2a4\ud2b8 \ud30c\uc77c (Context File)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "label": "\uc790\ub3d9 \uac15\uc81c \uc2dc\uc2a4\ud15c (Auto Enforcement System)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_garbage_collection",
+      "label": "\uac00\ube44\uc9c0 \uceec\ub809\uc158 (Garbage Collection)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "label": "claude.md / agent.md (\uc628\ubcf4\ub529 \uc9c0\uce68 \ud30c\uc77c)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_linter_test",
+      "label": "\ub9b0\ud130 / \ud14c\uc2a4\ud2b8 \uc790\ub3d9\ud654 (Linter & Test Automation)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_precommit_hook",
+      "label": "\ud504\ub9ac\ucee4\ubc0b \ud6c5 (Pre-commit Hook)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "label": "\ucee8\ud14d\uc2a4\ud2b8 \ubd80\ud328 (Context Corruption)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_prompt_engineering",
+      "label": "\ud504\ub86c\ud504\ud2b8 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 (Prompt Engineering)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "label": "\uac1c\ubc1c\uc790 \uc5ed\ud560 \ubcc0\ud654 (Developer Role Change)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_rationale_structural_design",
+      "label": "\uc65c \ud558\ub124\uc2a4\uac00 \ud544\uc694\ud55c\uac00 (Rationale: Structural Design over Prompting)",
+      "file_type": "document",
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": null,
+      "source_url": "https://www.youtube.com/watch?v=DrekqeDlO1w&t=866s",
+      "captured_at": "2026-04-06",
+      "author": "\uce90\uc2ac AI",
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "readme_raw_sources",
+      "target": "llmwiki_raw_sources",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "raw/README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_graphify_workflow",
+      "target": "llmwiki_ingest_operation",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "raw/README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_naming_convention",
+      "target": "readme_raw_sources",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_graphify_workflow",
+      "target": "readme_raw_sources",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_rag",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_persistent_wiki",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_persistent_wiki",
+      "target": "llmwiki_compounding_knowledge",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_persistent_wiki",
+      "target": "llmwiki_rag",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_raw_sources",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_wiki_layer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_schema_layer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_ingest_operation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_query_operation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_lint_operation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_index_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_log_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_obsidian",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_llm_wiki",
+      "target": "llmwiki_memex",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_ingest_operation",
+      "target": "llmwiki_raw_sources",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_ingest_operation",
+      "target": "llmwiki_wiki_layer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_query_operation",
+      "target": "llmwiki_index_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "llmwiki_query_operation",
+      "target": "llmwiki_wiki_layer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 1",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 4-1",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 4-2",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_garbage_collection",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 4-3",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 4-1",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_linter_test",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 4-2",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_precommit_hook",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 5",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 2",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 2",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_prompt_engineering",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 3",
+      "weight": 0.8
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 6",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_rationale_structural_design",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 2-3",
+      "weight": 1.0
+    },
+    {
+      "source": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "target": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md",
+      "source_location": "section 6",
+      "weight": 0.85
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "three_layer_architecture",
+      "label": "Three-Layer LLM Wiki Architecture",
+      "nodes": [
+        "llmwiki_raw_sources",
+        "llmwiki_wiki_layer",
+        "llmwiki_schema_layer"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md"
+    },
+    {
+      "id": "three_operations",
+      "label": "Core Wiki Operations",
+      "nodes": [
+        "llmwiki_ingest_operation",
+        "llmwiki_query_operation",
+        "llmwiki_lint_operation"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "raw/articles/2026-04-15-karpathy-llm-wiki.md"
+    },
+    {
+      "id": "harness_three_components",
+      "label": "\ud558\ub124\uc2a4\uc758 3\ub300 \uad6c\uc131 \uc694\uc18c",
+      "nodes": [
+        "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+        "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+        "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_garbage_collection"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md"
+    },
+    {
+      "id": "harness_practical_steps",
+      "label": "\ud558\ub124\uc2a4 \uc2e4\ubb34 \uc801\uc6a9 3\ub2e8\uacc4",
+      "nodes": [
+        "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+        "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_precommit_hook",
+        "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_linter_test"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "raw/notes/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

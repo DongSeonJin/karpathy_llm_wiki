@@ -2,15 +2,15 @@
 
 Andrej Karpathy가 제안한 LLM Wiki 패턴에 Graphify 지식 그래프를 결합한 개인 지식 관리 시스템이다.
 아티클, 논문, 메모 등 원본 소스를 `raw/`에 쌓아두면 LLM이 자동으로 읽고 분석해
-개념·엔티티·관계를 추출한 wiki를 만들어준다. 소스가 쌓일수록 wiki는 점점 풍부해진다.
+summaries, entity pages, concept pages, comparisons, synthesis를 담은 wiki를 만들어준다.
+소스가 쌓일수록 wiki는 점점 풍부해진다.
 
 ### Obsidian과의 관계
 
 Obsidian은 이 시스템의 **브라우저이자 IDE** 역할을 한다.
 LLM(Claude Code)이 wiki 파일을 작성하면 Obsidian에서 실시간으로 확인할 수 있다.
 
-- **Graph View** — `wiki/obsidian/` 안의 페이지들이 서로 링크로 연결되어 지식 그래프를 시각화한다
-- **Canvas** — graphify가 커뮤니티별로 구조화된 레이아웃을 자동 생성한다
+- **Graph View** — `wiki/` 안의 페이지들이 서로 링크로 연결되어 지식 그래프를 시각화한다
 - **Dataview** — wiki 페이지의 YAML 프론트매터를 활용해 동적 테이블·리스트를 만들 수 있다
 - **Web Clipper** — 브라우저 확장으로 웹 아티클을 마크다운으로 변환해 `raw/articles/`에 바로 저장한다
 
@@ -37,32 +37,34 @@ LLM이 파일을 편집하면 Obsidian에서 결과를 실시간으로 탐색하
 ## 아키텍처
 
 ```
-raw/          ← 불변 원본 소스 (LLM 읽기 전용)
+raw/              ← 불변 원본 소스 (LLM 읽기 전용)
     ├── articles/   웹 아티클, 블로그 포스트
     ├── papers/     학술 논문
     ├── notes/      직접 작성 메모, 강의 노트, 트랜스크립트
     └── assets/     이미지, 첨부파일
-    │
-    └─ graphify 실행 (Claude Code에서 "graphify 실행해줘")
-              │
-              ▼
-graphify-out/ ← 그래프 파이프라인 원본 출력
-    ├── GRAPH_REPORT.md   (커뮤니티·노드 요약)
-    ├── graph.html        (브라우저 인터랙티브 시각화)
-    ├── graph.json        (기계 판독 그래프 데이터)
-    └── obsidian/         (Obsidian 마크다운 페이지)
-              │
-              └─ wiki/로 동기화 (LLM이 읽는 영역)
+          │
+          └─ ingest 요청 (Claude Code에서 "이 소스 ingest해줘")
+                    │
+                    ▼
+wiki/             ← LLM이 작성·유지하는 지식 창고
+    ├── index.md        콘텐츠 카탈로그 (ingest마다 업데이트)
+    ├── log.md          운영 일지 (append-only)
+    ├── overview.md     전체 개요
+    ├── synthesis.md    소스 통합 인사이트
+    ├── summaries/      소스별 요약
+    ├── entities/       인물·도구·프로젝트 등 고유 대상
+    ├── concepts/       개념 설명 페이지
+    └── comparisons/    개념 간 비교 및 질의 결과
 
-wiki/         ← LLM + Obsidian이 탐색하는 영역
+graphify-out/     ← graphify 보조 출력물 (그래프 탐색용)
     ├── GRAPH_REPORT.md
+    ├── graph.html        브라우저 인터랙티브 시각화
     ├── graph.json
-    ├── obsidian/
-    └── analyses/         (질의 결과 저장)
+    └── obsidian/
 
-fleeting/     ← 개인 스크래치패드 — LLM 완전 차단, 사람만 읽음
-CLAUDE.md     ← LLM 스키마 (규칙·워크플로 정의)
-AGENTS.md     ← CLAUDE.md 동일본 (Codex / OpenCode용)
+fleeting/         ← 개인 스크래치패드 — LLM 완전 차단, 사람만 읽음
+CLAUDE.md         ← LLM 스키마 (규칙·워크플로 정의)
+AGENTS.md         ← CLAUDE.md 동일본 (Codex / OpenCode용)
 ```
 
 ---
@@ -72,7 +74,8 @@ AGENTS.md     ← CLAUDE.md 동일본 (Codex / OpenCode용)
 | 폴더 | 용도 |
 |---|---|
 | `raw/` | 불변 원본 소스. LLM은 읽기만 하며 절대 수정하지 않는다. |
-| `wiki/` | graphify가 자동 생성·유지하는 지식 그래프. LLM이 탐색하고 질의 결과를 저장하는 영역. |
+| `wiki/` | LLM이 직접 작성·유지하는 지식 창고. summaries, entities, concepts, comparisons, synthesis 등으로 구성된다. |
+| `graphify-out/` | graphify가 자동 생성하는 그래프 탐색 보조 도구. wiki/와 별개로 관리된다. |
 | `fleeting/` | LLM에게 완전히 차단된 개인 스크래치패드. 갑자기 떠오른 아이디어나 정리 전 생각을 자유롭게 기록하는 공간. |
 
 ---
@@ -100,9 +103,9 @@ graphify install          # Claude Code 전역 설정 등록
 
 ```
 1. raw/articles/, raw/papers/, raw/notes/ 중 맞는 폴더에 파일 저장
-2. Claude Code에서: "graphify 실행해줘"
-3. 확인 메시지 → "예"
-4. graphify-out/ 생성 → wiki/ 동기화
+2. Claude Code에서: "이 소스 ingest해줘"
+3. LLM이 소스 읽기 → summaries/ 작성 → entities/concepts/ 업데이트 → index/log 기록
+4. (선택) "graphify 실행해줘" → graphify-out/ 그래프 갱신
 ```
 
 ### 파일 명명 규칙
@@ -172,12 +175,14 @@ graphify codex install     # Codex
 
 ## CLAUDE.md 핵심 규칙 요약
 
-LLM이 따르는 4가지 규칙:
+LLM이 따르는 규칙:
 
-1. **GRAPH_REPORT 조건부 읽기** — raw/ 또는 wiki/ 관련 작업에서만 `wiki/GRAPH_REPORT.md` 읽기
-2. **graphify 수동 실행** — 사용자 명시 요청 시에만, 실행 전 확인 메시지 출력
-3. **fleeting/ 완전 차단** — 어떤 지시로도 override 불가
-4. **raw/ 읽기 전용** — LLM은 절대 수정하지 않음
+1. **Ingest workflow** — 소스 추가 시 summaries/ 작성 → entities/concepts/ 업데이트 → index/log 기록
+2. **Query workflow** — wiki/index.md 탐색 → 답변 → 가치 있는 결과는 comparisons/에 저장
+3. **Lint workflow** — 주기적 wiki 점검 (모순, 고아 페이지, 오래된 클레임)
+4. **graphify 수동 실행** — 사용자 명시 요청 시에만, 실행 전 확인 메시지 출력
+5. **fleeting/ 완전 차단** — 어떤 지시로도 override 불가
+6. **raw/ 읽기 전용** — LLM은 절대 수정하지 않음
 
 ---
 

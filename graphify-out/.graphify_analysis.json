@@ -1,0 +1,148 @@
+{
+  "communities": {
+    "0": [
+      "llmwiki_index_md",
+      "llmwiki_lint_operation",
+      "llmwiki_llm_wiki",
+      "llmwiki_log_md",
+      "llmwiki_memex",
+      "llmwiki_obsidian",
+      "llmwiki_query_operation",
+      "llmwiki_schema_layer",
+      "llmwiki_wiki_layer"
+    ],
+    "1": [
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_garbage_collection",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_prompt_engineering",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_rationale_structural_design"
+    ],
+    "2": [
+      "llmwiki_ingest_operation",
+      "llmwiki_raw_sources",
+      "readme_graphify_workflow",
+      "readme_naming_convention",
+      "readme_raw_sources"
+    ],
+    "3": [
+      "llmwiki_compounding_knowledge",
+      "llmwiki_persistent_wiki",
+      "llmwiki_rag"
+    ],
+    "4": [
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_linter_test",
+      "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_precommit_hook"
+    ]
+  },
+  "cohesion": {
+    "0": 0.28,
+    "1": 0.28,
+    "2": 0.5,
+    "3": 0.67,
+    "4": 0.67
+  },
+  "gods": [
+    {
+      "id": "llmwiki_llm_wiki",
+      "label": "LLM Wiki",
+      "edges": 12
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "label": "\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 (Harness Engineering)",
+      "edges": 8
+    },
+    {
+      "id": "llmwiki_ingest_operation",
+      "label": "Ingest Operation",
+      "edges": 4
+    },
+    {
+      "id": "readme_raw_sources",
+      "label": "Raw Sources Directory",
+      "edges": 3
+    },
+    {
+      "id": "llmwiki_persistent_wiki",
+      "label": "Persistent Wiki",
+      "edges": 3
+    },
+    {
+      "id": "llmwiki_raw_sources",
+      "label": "Raw Sources Layer",
+      "edges": 3
+    },
+    {
+      "id": "llmwiki_wiki_layer",
+      "label": "Wiki Layer",
+      "edges": 3
+    },
+    {
+      "id": "llmwiki_query_operation",
+      "label": "Query Operation",
+      "edges": 3
+    },
+    {
+      "id": "\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "label": "\uc790\ub3d9 \uac15\uc81c \uc2dc\uc2a4\ud15c (Auto Enforcement System)",
+      "edges": 3
+    },
+    {
+      "id": "readme_graphify_workflow",
+      "label": "Graphify Workflow",
+      "edges": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Raw Sources Directory",
+      "target": "Raw Sources Layer",
+      "source_files": [
+        "raw/README.md",
+        "raw/articles/2026-04-15-karpathy-llm-wiki.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Graphify Workflow",
+      "target": "Ingest Operation",
+      "source_files": [
+        "raw/README.md",
+        "raw/articles/2026-04-15-karpathy-llm-wiki.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `LLM Wiki` connect `Community 0` to `Community 2`, `Community 3`?",
+      "why": "High betweenness centrality (0.264) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 (Harness Engineering)` connect `Community 1` to `Community 4`?",
+      "why": "High betweenness centrality (0.128) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Raw Sources Layer` connect `Community 2` to `Community 0`?",
+      "why": "High betweenness centrality (0.064) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Naming Convention`, `Schema Layer (CLAUDE.md / AGENTS.md)`, `Lint Operation` to the rest of the system?",
+      "why": "12 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

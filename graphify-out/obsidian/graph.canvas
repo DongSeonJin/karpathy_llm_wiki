@@ -1,0 +1,527 @@
+{
+  "nodes": [
+    {
+      "id": "g0",
+      "type": "group",
+      "label": "LLM Wiki & Obsidian Layer",
+      "x": 0,
+      "y": 0,
+      "width": 660,
+      "height": 420,
+      "color": "1"
+    },
+    {
+      "id": "n_llmwiki_llm_wiki",
+      "type": "file",
+      "file": "graphify/obsidian/LLM Wiki.md",
+      "x": 20,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_lint_operation",
+      "type": "file",
+      "file": "graphify/obsidian/Lint Operation.md",
+      "x": 220,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_obsidian",
+      "type": "file",
+      "file": "graphify/obsidian/Obsidian (PKM tool).md",
+      "x": 420,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_query_operation",
+      "type": "file",
+      "file": "graphify/obsidian/Query Operation.md",
+      "x": 20,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_schema_layer",
+      "type": "file",
+      "file": "graphify/obsidian/Schema Layer (CLAUDE.md  AGENTS.md).md",
+      "x": 220,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_memex",
+      "type": "file",
+      "file": "graphify/obsidian/Vannevar Bush Memex.md",
+      "x": 420,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_wiki_layer",
+      "type": "file",
+      "file": "graphify/obsidian/Wiki Layer.md",
+      "x": 20,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_index_md",
+      "type": "file",
+      "file": "graphify/obsidian/index.md (wiki index).md",
+      "x": 220,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_log_md",
+      "type": "file",
+      "file": "graphify/obsidian/log.md (chronological log).md",
+      "x": 420,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "label": "AI Agent & Harness Engineering",
+      "x": 740,
+      "y": 0,
+      "width": 660,
+      "height": 420,
+      "color": "2"
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "type": "file",
+      "file": "graphify/obsidian/AI \uc5d0\uc774\uc804\ud2b8 (AI Agent).md",
+      "x": 760,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "type": "file",
+      "file": "graphify/obsidian/claude.md  agent.md (\uc628\ubcf4\ub529 \uc9c0\uce68 \ud30c\uc77c).md",
+      "x": 960,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_garbage_collection",
+      "type": "file",
+      "file": "graphify/obsidian/\uac00\ube44\uc9c0 \uceec\ub809\uc158 (Garbage Collection).md",
+      "x": 1160,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "type": "file",
+      "file": "graphify/obsidian/\uac1c\ubc1c\uc790 \uc5ed\ud560 \ubcc0\ud654 (Developer Role Change).md",
+      "x": 760,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_rationale_structural_design",
+      "type": "file",
+      "file": "graphify/obsidian/\uc65c \ud558\ub124\uc2a4\uac00 \ud544\uc694\ud55c\uac00 (Rationale Structural Design over Prompting).md",
+      "x": 960,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "type": "file",
+      "file": "graphify/obsidian/\ucee8\ud14d\uc2a4\ud2b8 \ubd80\ud328 (Context Corruption).md",
+      "x": 1160,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "type": "file",
+      "file": "graphify/obsidian/\ucee8\ud14d\uc2a4\ud2b8 \ud30c\uc77c (Context File).md",
+      "x": 760,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_prompt_engineering",
+      "type": "file",
+      "file": "graphify/obsidian/\ud504\ub86c\ud504\ud2b8 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 (Prompt Engineering).md",
+      "x": 960,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "type": "file",
+      "file": "graphify/obsidian/\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 (Harness Engineering).md",
+      "x": 1160,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "label": "Source Ingestion Pipeline",
+      "x": 1480,
+      "y": 0,
+      "width": 660,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_readme_graphify_workflow",
+      "type": "file",
+      "file": "graphify/obsidian/Graphify Workflow.md",
+      "x": 1500,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_ingest_operation",
+      "type": "file",
+      "file": "graphify/obsidian/Ingest Operation.md",
+      "x": 1700,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_naming_convention",
+      "type": "file",
+      "file": "graphify/obsidian/Naming Convention.md",
+      "x": 1900,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_raw_sources",
+      "type": "file",
+      "file": "graphify/obsidian/Raw Sources Directory.md",
+      "x": 1500,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_raw_sources",
+      "type": "file",
+      "file": "graphify/obsidian/Raw Sources Layer.md",
+      "x": 1700,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "label": "Persistent Knowledge vs RAG",
+      "x": 0,
+      "y": 500,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_llmwiki_compounding_knowledge",
+      "type": "file",
+      "file": "graphify/obsidian/Compounding Knowledge.md",
+      "x": 20,
+      "y": 580,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_persistent_wiki",
+      "type": "file",
+      "file": "graphify/obsidian/Persistent Wiki.md",
+      "x": 220,
+      "y": 580,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_llmwiki_rag",
+      "type": "file",
+      "file": "graphify/obsidian/RAG (Retrieval-Augmented Generation).md",
+      "x": 420,
+      "y": 580,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g4",
+      "type": "group",
+      "label": "Automated Quality Gates",
+      "x": 740,
+      "y": 500,
+      "width": 600,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_linter_test",
+      "type": "file",
+      "file": "graphify/obsidian/\ub9b0\ud130  \ud14c\uc2a4\ud2b8 \uc790\ub3d9\ud654 (Linter & Test Automation).md",
+      "x": 760,
+      "y": 580,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "type": "file",
+      "file": "graphify/obsidian/\uc790\ub3d9 \uac15\uc81c \uc2dc\uc2a4\ud15c (Auto Enforcement System).md",
+      "x": 960,
+      "y": 580,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_precommit_hook",
+      "type": "file",
+      "file": "graphify/obsidian/\ud504\ub9ac\ucee4\ubc0b \ud6c5 (Pre-commit Hook).md",
+      "x": 1160,
+      "y": 580,
+      "width": 180,
+      "height": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_readme_raw_sources_llmwiki_raw_sources",
+      "fromNode": "n_readme_raw_sources",
+      "toNode": "n_llmwiki_raw_sources",
+      "label": "semantically_similar_to [INFERRED]"
+    },
+    {
+      "id": "e_readme_raw_sources_readme_naming_convention",
+      "fromNode": "n_readme_raw_sources",
+      "toNode": "n_readme_naming_convention",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_raw_sources_readme_graphify_workflow",
+      "fromNode": "n_readme_raw_sources",
+      "toNode": "n_readme_graphify_workflow",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_graphify_workflow_llmwiki_ingest_operation",
+      "fromNode": "n_readme_graphify_workflow",
+      "toNode": "n_llmwiki_ingest_operation",
+      "label": "semantically_similar_to [INFERRED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_rag",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_rag",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_persistent_wiki",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_persistent_wiki",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_raw_sources",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_raw_sources",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_wiki_layer",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_wiki_layer",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_schema_layer",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_schema_layer",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_ingest_operation",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_ingest_operation",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_query_operation",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_query_operation",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_lint_operation",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_lint_operation",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_index_md",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_index_md",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_log_md",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_log_md",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_obsidian",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_obsidian",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_llm_wiki_llmwiki_memex",
+      "fromNode": "n_llmwiki_llm_wiki",
+      "toNode": "n_llmwiki_memex",
+      "label": "conceptually_related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_persistent_wiki_llmwiki_compounding_knowledge",
+      "fromNode": "n_llmwiki_persistent_wiki",
+      "toNode": "n_llmwiki_compounding_knowledge",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_persistent_wiki_llmwiki_rag",
+      "fromNode": "n_llmwiki_persistent_wiki",
+      "toNode": "n_llmwiki_rag",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_llmwiki_raw_sources_llmwiki_ingest_operation",
+      "fromNode": "n_llmwiki_raw_sources",
+      "toNode": "n_llmwiki_ingest_operation",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_wiki_layer_llmwiki_ingest_operation",
+      "fromNode": "n_llmwiki_wiki_layer",
+      "toNode": "n_llmwiki_ingest_operation",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_wiki_layer_llmwiki_query_operation",
+      "fromNode": "n_llmwiki_wiki_layer",
+      "toNode": "n_llmwiki_query_operation",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_llmwiki_query_operation_llmwiki_index_md",
+      "fromNode": "n_llmwiki_query_operation",
+      "toNode": "n_llmwiki_index_md",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_garbage_collection",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_garbage_collection",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_rationale_structural_design",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_rationale_structural_design",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_file",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_linter_test",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_linter_test",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_precommit_hook",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_auto_enforcement_system",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_precommit_hook",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_claude_md",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_context_corruption",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_ai_agent",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_developer_role_change",
+      "label": "conceptually_related_to [INFERRED]"
+    },
+    {
+      "id": "e_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_prompt_engineering",
+      "fromNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_harness_engineering",
+      "toNode": "n_\ud558\ub124\uc2a4\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1_prompt_engineering",
+      "label": "conceptually_related_to [INFERRED]"
+    }
+  ]
+}
