@@ -1,0 +1,27 @@
+# LLM 스키마 파일 — graphify가 지시문을 지식으로 오해하지 않도록
+CLAUDE.md
+AGENTS.md
+
+# graphify 자체 출력물 — 재귀 추출 방지
+graphify-out/
+graphify/
+
+# Obsidian 내부 설정
+.obsidian/
+.smtcmp_json_db/
+.smtcmp_vector_db.tar.gz
+
+# 개인 스크래치패드
+fleeting/
+
+# 시스템 파일
+.DS_Store
+.claude/
+
+# 메타 문서
+docs/
+README.md
+
+# Web Clipper 템플릿
+clipper-*.json
+기본-템플릿-clipper.json
