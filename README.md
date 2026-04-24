@@ -108,6 +108,43 @@ graphify install          # Claude Code 전역 설정 등록
 4. (선택) "graphify 실행해줘" → graphify-out/ 그래프 갱신
 ```
 
+### Obsidian Web Clipper 설정
+
+브라우저에서 웹 페이지를 클리핑해 `raw/` 폴더에 바로 저장하는 확장 프로그램이다.
+
+**설치:** [Obsidian Web Clipper](https://obsidian.md/clipper) 크롬 확장 설치
+
+**템플릿 임포트:**
+루트 디렉터리의 JSON 파일을 Web Clipper에 임포트한다.
+Web Clipper 아이콘 → Settings → Templates → Import template
+
+| 파일 | 저장 위치 | 자동 감지 URL |
+|---|---|---|
+| `clipper-articles.json` | `raw/articles/` | (없음 — 기본 템플릿) |
+| `clipper-notes.json` | `raw/notes/` | YouTube, Spotify, Apple Podcasts, Overcast, Goodreads |
+| `clipper-papers.json` | `raw/papers/` | arXiv, DOI, Semantic Scholar, HuggingFace Papers |
+| `clipper-assets.json` | `raw/assets/` | (없음) |
+
+**사용법:**
+1. 저장할 페이지에서 Web Clipper 아이콘 클릭
+2. URL에 맞는 템플릿이 자동 선택됨 (YouTube → notes 등)
+3. 템플릿 확인 후 Save — `raw/` 하위 폴더에 마크다운으로 저장
+4. Claude Code에서 "ingest해줘" 요청
+
+**파일명 자동 생성 규칙:**
+- articles / notes: `YYYY-MM-DD-title-slug.md`
+- papers: `lastname-YYYY-title-slug.md` (저장 후 shorttitle로 수동 축약 권장)
+- assets: 페이지 제목 그대로
+
+**템플릿 공통 프론트매터:**
+```yaml
+source_url:   # 원본 URL — graphify 노드 메타데이터로 연결
+captured_at:  # 수집 날짜
+type:         # article / note / paper / asset
+author:
+tags:         # raw/article 등 — wiki 연결 추적용
+```
+
 ### 파일 명명 규칙
 
 | 폴더 | 형식 | 예시 |

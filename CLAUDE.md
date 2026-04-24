@@ -32,9 +32,11 @@
 ## 탐색 시작점
 
 raw/ 또는 wiki/와 관련된 작업 시:
-1. `wiki/index.md` 읽기 — 전체 wiki 콘텐츠 카탈로그
-2. 관련 페이지 드릴다운 — `wiki/summaries/`, `wiki/concepts/`, `wiki/entities/`
-3. `wiki/log.md` 확인 — 최근 ingest/query 이력
+0. `graphify-out/GRAPH_REPORT.md` 읽기 — 전체 개념 구조·커뮤니티·핵심 노드 파악 (파일이 없으면 건너뜀)
+1. `graphify-out/wiki/index.md` 존재 시 → 해당 파일로 탐색 시작 (raw 파일 직접 읽기 대신)
+2. `wiki/index.md` 읽기 — 전체 wiki 콘텐츠 카탈로그
+3. 관련 페이지 드릴다운 — `wiki/summaries/`, `wiki/concepts/`, `wiki/entities/`
+4. `wiki/log.md` 확인 — 최근 ingest/query 이력
 
 ---
 
@@ -85,6 +87,10 @@ raw/ 또는 wiki/와 관련된 작업 시:
   > "Graphify를 실행하면 graphify-out/이 업데이트됩니다. 진행할까요?"
 - 사용자가 "예", "응", "yes", "y" 등 긍정 응답 시에만 실행.
 - graphify는 wiki/ 레이어와 별개로 동작하는 보조 그래프 탐색 도구다.
+- 코드 파일 수정 후 그래프를 최신 상태로 유지하려면:
+  ```bash
+  python3 -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))"
+  ```
 
 ---
 
@@ -114,3 +120,4 @@ raw/ 또는 wiki/와 관련된 작업 시:
 ## Local LLM (Ollama) 사용자
 
 이 CLAUDE.md 내용 전체를 시스템 프롬프트에 붙여넣어 사용.
+
