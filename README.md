@@ -110,117 +110,39 @@ graphify install          # Claude Code 전역 설정 등록
 
 ### Obsidian Web Clipper 설정
 
-브라우저에서 웹 페이지를 마크다운으로 변환해 `raw/` 폴더에 바로 저장하는 확장 프로그램이다.
-루트의 JSON 템플릿 파일들은 이 볼트의 `raw/` 구조에 맞게 미리 만들어져 있다.
+브라우저에서 웹 페이지를 클리핑해 `raw/` 폴더에 바로 저장하는 확장 프로그램이다.
 
-**설치:** [Obsidian Web Clipper](https://obsidian.md/clipper) 브라우저 확장 설치
+**설치:** [Obsidian Web Clipper](https://obsidian.md/clipper) 크롬 확장 설치
 
 **템플릿 임포트:**
-```
+루트 디렉터리의 JSON 파일을 Web Clipper에 임포트한다.
 Web Clipper 아이콘 → Settings → Templates → Import template
-```
-루트의 JSON 파일 4개를 모두 임포트한다.
 
----
-
-#### 템플릿별 동작
-
-| 템플릿 파일 | 저장 위치 | 자동 감지 URL |
+| 파일 | 저장 위치 | 자동 감지 URL |
 |---|---|---|
-| `clipper-articles.json` | `raw/articles/` | 없음 (수동 선택) |
+| `clipper-articles.json` | `raw/articles/` | (없음 — 기본 템플릿) |
 | `clipper-notes.json` | `raw/notes/` | YouTube, Spotify, Apple Podcasts, Overcast, Goodreads |
-| `clipper-papers.json` | `raw/papers/` | arXiv, DOI, Semantic Scholar, Google Scholar, SSRN, HuggingFace Papers |
-| `clipper-assets.json` | `raw/assets/` | 없음 (수동 선택) |
+| `clipper-papers.json` | `raw/papers/` | arXiv, DOI, Semantic Scholar, HuggingFace Papers |
+| `clipper-assets.json` | `raw/assets/` | (없음) |
 
-URL에 맞는 템플릿이 자동 선택된다. YouTube → `raw/notes`, arXiv → `raw/papers` 등.
-자동 감지가 없는 URL은 아이콘 클릭 후 템플릿을 수동으로 선택한다.
+**사용법:**
+1. 저장할 페이지에서 Web Clipper 아이콘 클릭
+2. URL에 맞는 템플릿이 자동 선택됨 (YouTube → notes 등)
+3. 템플릿 확인 후 Save — `raw/` 하위 폴더에 마크다운으로 저장
+4. Claude Code에서 "ingest해줘" 요청
 
----
+**파일명 자동 생성 규칙:**
+- articles / notes: `YYYY-MM-DD-title-slug.md`
+- papers: `lastname-YYYY-title-slug.md` (저장 후 shorttitle로 수동 축약 권장)
+- assets: 페이지 제목 그대로
 
-#### 저장되는 마크다운 구조
-
-**articles** — 본문 전체 (`{{content}}`)
-```markdown
----
-title: ...
-type: article
-source_url: ...
-author: ...
-site: ...
-published: ...
-captured_at: ...
-tags: [raw/article]
----
-
-(본문)
-```
-
-**notes** (YouTube, 팟캐스트, Goodreads 등)
-```markdown
----
-title: ...
-type: note
-source_url: ...
-...
----
-
-## Source Info
-- Author / Channel / Host: ...
-- Site: ...
-
-## Description
-...
-
-## Content / Transcript / Notes
-...
-```
-
-**papers** (arXiv, DOI 등)
-```markdown
----
-title: ...
-type: paper
-source_url: ...
-venue: ...
-...
----
-
-## Abstract
-...
-
-## Content / Notes
-...
-```
-
----
-
-#### 파일명 규칙
-
-Web Clipper는 파일명을 자동 생성하지 않는다. 저장 후 `raw/` 명명 규칙에 맞게 직접 변경한다.
-
-| 폴더 | 형식 | 예시 |
-|---|---|---|
-| `raw/articles/` | `YYYY-MM-DD-slug.md` | `2026-04-15-karpathy-llm-wiki.md` |
-| `raw/notes/` | `YYYY-MM-DD-slug.md` | `2026-04-21-andrej-llm-talk.md` |
-| `raw/papers/` | `lastname-YYYY-shorttitle.md` | `vaswani-2017-attention.md` |
-| `raw/assets/` | 원본 파일명 유지 | |
-
----
-
-#### graphify와의 연결
-
-프론트매터의 `source_url`, `captured_at`, `author` 필드는 `/graphify raw` 실행 시 그래프 노드 메타데이터로 자동 반영된다. 클리핑 소스의 출처가 그래프에 추적된다.
-
----
-
-#### 전체 워크플로
-
-```
-1. 브라우저에서 저장할 페이지 열기
-2. Web Clipper 아이콘 클릭 → 템플릿 확인 (자동 선택 or 수동 선택)
-3. Save → raw/ 하위 폴더에 마크다운 저장
-4. 파일명을 raw/ 명명 규칙에 맞게 변경
-5. Claude Code에서: "이 소스 ingest해줘"
+**템플릿 공통 프론트매터:**
+```yaml
+source_url:   # 원본 URL — graphify 노드 메타데이터로 연결
+captured_at:  # 수집 날짜
+type:         # article / note / paper / asset
+author:
+tags:         # raw/article 등 — wiki 연결 추적용
 ```
 
 ### 파일 명명 규칙
