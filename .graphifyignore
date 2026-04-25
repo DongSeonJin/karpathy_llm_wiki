@@ -6,6 +6,9 @@ AGENTS.md
 graphify-out/
 graphify/
 
+# LLM 생성 wiki — 원본 소스와 뒤섞임 방지
+wiki/
+
 # Obsidian 내부 설정
 .obsidian/
 .smtcmp_json_db/
