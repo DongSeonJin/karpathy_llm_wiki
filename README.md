@@ -114,6 +114,13 @@ graphify install          # Claude Code 전역 설정 등록
 
 **설치:** [Obsidian Web Clipper](https://obsidian.md/clipper) 크롬 확장 설치
 
+> **템플릿 파일 안내:** 루트의 `clipper-*.json` 파일들은 `.gitignore`에 등록되어 GitHub에 올라가 있지 않다.
+> `기본-템플릿-clipper.json`을 참고해 LLM에게 아래와 같이 요청하면 생성할 수 있다:
+> ```
+> 기본-템플릿-clipper.json을 참고해서 raw/articles, raw/notes, raw/papers, raw/assets
+> 각각에 맞는 Web Clipper 템플릿 JSON 파일을 루트 디렉터리에 생성해줘.
+> ```
+
 **템플릿 임포트:**
 루트 디렉터리의 JSON 파일을 Web Clipper에 임포트한다.
 Web Clipper 아이콘 → Settings → Templates → Import template
