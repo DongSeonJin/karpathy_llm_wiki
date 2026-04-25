@@ -232,6 +232,57 @@ LLM이 따르는 규칙:
 
 ---
 
+## Graphify 명령어 사용법
+
+graphify는 `raw/` 폴더를 지식 그래프로 변환하는 도구다. Claude Code에서 `/graphify` 슬래시 커맨드로 실행한다.
+
+### 그래프 만들기
+
+| 명령어 | 언제 쓰나 |
+|---|---|
+| `/graphify raw/` | 처음 그래프 생성 |
+| `/graphify raw/ --update` | 새 파일 추가 후 증분 업데이트 (변경된 파일만 재처리) |
+| `/graphify raw/ --mode deep` | 더 많은 연결 추출 (토큰 더 소모) |
+
+### 그래프 탐색
+
+| 명령어 | 언제 쓰나 |
+|---|---|
+| `/graphify query "질문"` | 자연어로 그래프 검색 |
+| `/graphify path "NodeA" "NodeB"` | 두 개념 사이의 연결 경로 추적 |
+| `/graphify explain "NodeName"` | 특정 노드 설명 (어디서 왔고 무엇과 연결됐는지) |
+
+### 소스 추가
+
+| 명령어 | 언제 쓰나 |
+|---|---|
+| `/graphify add <URL>` | URL 직접 ingestion (arXiv, 트위터, 웹페이지 등) — `raw/`에 자동 저장 |
+
+### 출력 포맷
+
+| 명령어 | 언제 쓰나 |
+|---|---|
+| `/graphify raw/ --wiki` | `graphify-out/wiki/` 생성 — LLM 탐색용 마크다운 wiki |
+| `/graphify raw/ --graphml` | Gephi에서 열 수 있는 포맷으로 export (더 나은 시각화) |
+| `/graphify raw/ --mcp` | MCP 서버로 실행 — 다른 에이전트가 그래프 실시간 쿼리 가능 |
+
+### 실용 흐름
+
+```
+소스 추가           →  /graphify raw/ --update
+개념 검색           →  /graphify query "질문"
+두 개념 연결 추적   →  /graphify path "A" "B"
+특정 노드 파악      →  /graphify explain "노드명"
+예쁜 시각화         →  /graphify raw/ --graphml  (Gephi에서 열기)
+```
+
+### 주의사항
+
+- 파일명에 영어 단어 `token`, `secret`, `password` 등이 포함되면 graphify 보안 스캐너에 걸려 스킵된다. 파일명을 한글로 변경하면 해결된다.
+- graphify는 `raw/` 만 타겟으로 실행한다. `wiki/`나 루트 전체 실행 금지.
+
+---
+
 ## 라이선스
 
 MIT
