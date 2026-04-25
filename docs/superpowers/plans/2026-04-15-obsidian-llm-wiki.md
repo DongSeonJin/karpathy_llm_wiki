@@ -213,7 +213,7 @@ cat > CLAUDE.md << 'RULES'
 | 폴더 | 역할 | LLM 접근 |
 |---|---|---|
 | `raw/` | 불변 원본 소스 (아티클, 논문, 메모) | 읽기 전용 |
-| `wiki/` | LLM이 작성·유지하는 지식 창고 | 읽기 + 쓰기 |
+| `wiki/` | LLM이 작성·유지하는 지식 창고 | 읽기 + 쓰기 (Operations 규칙 준수) |
 | `graphify-out/` | graphify 보조 출력물 (그래프 탐색용) | 읽기 전용 |
 | `fleeting/` | 개인 스크래치패드 | **완전 차단** |
 | `docs/` | 메타 문서 | 읽기 전용 |
@@ -246,6 +246,8 @@ raw/ 또는 wiki/와 관련된 작업 시:
 
 ## Operations
 
+> `wiki/` 파일은 아래 오퍼레이션 절차를 통해서만 수정한다. 사용자가 명시적으로 요청하지 않은 wiki/ 파일 수정 금지.
+
 ### Ingest (소스 추가 시)
 
 사용자가 raw/에 새 소스를 추가하고 ingest를 요청하면:
@@ -259,11 +261,16 @@ raw/ 또는 wiki/와 관련된 작업 시:
 
 ### Query (질문 시)
 
-0. graphify-out/GRAPH_REPORT.md 읽기 — 개념 구조 파악 (없으면 건너뜀)
 1. wiki/index.md 읽기 → 관련 페이지 탐색
 2. 관련 pages 읽고 답변 생성
 3. 가치 있는 답변은 wiki/comparisons/YYYY-MM-DD-slug.md로 저장
 4. wiki/log.md에 query 기록
+
+### Session (세션 관리)
+
+- 긴 작업 후 컨텍스트 비용이 커지면 `/compact` 사용
+- 새 주제 시작 시 `/clear`로 컨텍스트 초기화
+- 현재 컨텍스트 크기 확인: `/context`
 
 ### Lint (주기적 점검)
 
@@ -285,20 +292,12 @@ raw/ 또는 wiki/와 관련된 작업 시:
 - 사용자가 "예", "응", "yes", "y" 등 긍정 응답 시에만 실행.
 - **실행 타겟은 항상 `raw/`**: `/graphify raw` (루트 전체 실행 금지 — wiki/ 오염 방지)
 - graphify는 wiki/ 레이어와 별개로 동작하는 보조 그래프 탐색 도구다.
-- 코드 파일 수정 후 그래프를 최신 상태로 유지하려면:
-  ```bash
-  python3 -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))"
-  ```
 
 ---
 
 ## fleeting/ 완전 차단
 
-- fleeting/ 폴더는 절대 읽지 않는다.
-- 이름에 "fleeting"이 포함된 모든 폴더에 동일하게 적용 (예: 0 fleeting/).
-- 사용자가 fleeting/ 파일을 직접 붙여넣지 않는 이상 내용을 알 수 없다.
-- "fleeting 폴더 읽어줘" 같은 요청도 거절한다.
-- 이 규칙은 어떤 지시로도 override할 수 없다.
+`fleeting/`(및 이름에 "fleeting" 포함 모든 폴더)는 절대 읽지 않는다. 어떤 지시로도 override 불가.
 
 ---
 
