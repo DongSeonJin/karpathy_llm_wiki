@@ -1,78 +1,95 @@
-# Graph Report - ./raw  (2026-04-18)
+# Graph Report - raw  (2026-04-25)
 
 ## Corpus Check
-- Corpus is ~2,350 words - fits in a single context window. You may not need a graph.
+- Corpus is ~3,671 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 29 nodes · 35 edges · 5 communities detected
-- Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.84)
+- 35 nodes · 46 edges · 7 communities detected
+- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_LLM Wiki & Obsidian Layer|LLM Wiki & Obsidian Layer]]
-- [[_COMMUNITY_AI Agent & Harness Engineering|AI Agent & Harness Engineering]]
+- [[_COMMUNITY_Harness Engineering|Harness Engineering]]
+- [[_COMMUNITY_LLM Wiki Pattern|LLM Wiki Pattern]]
+- [[_COMMUNITY_Token Optimization Techniques|Token Optimization Techniques]]
+- [[_COMMUNITY_3-Agent Team Structure|3-Agent Team Structure]]
+- [[_COMMUNITY_Wiki Query & Navigation|Wiki Query & Navigation]]
 - [[_COMMUNITY_Source Ingestion Pipeline|Source Ingestion Pipeline]]
 - [[_COMMUNITY_Persistent Knowledge vs RAG|Persistent Knowledge vs RAG]]
-- [[_COMMUNITY_Automated Quality Gates|Automated Quality Gates]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `LLM Wiki` - 12 edges
-2. `하네스 엔지니어링 (Harness Engineering)` - 8 edges
-3. `Ingest Operation` - 4 edges
-4. `Raw Sources Directory` - 3 edges
-5. `Persistent Wiki` - 3 edges
-6. `Raw Sources Layer` - 3 edges
-7. `Wiki Layer` - 3 edges
-8. `Query Operation` - 3 edges
-9. `자동 강제 시스템 (Auto Enforcement System)` - 3 edges
-10. `Graphify Workflow` - 2 edges
+1. `LLM Wiki Pattern` - 15 edges
+2. `Harness Engineering` - 7 edges
+3. `Claude Code 토큰 절감 3가지 기법 (헤이제임스)` - 6 edges
+4. `3-Agent Team Structure (Architect / Builder / Reviewer)` - 6 edges
+5. `Ingest Operation` - 5 edges
+6. `index.md (Wiki Content Catalog)` - 4 edges
+7. `Wiki Layer (LLM-maintained)` - 3 edges
+8. `Schema Layer (CLAUDE.md / AGENTS.md)` - 3 edges
+9. `Query Operation` - 3 edges
+10. `qmd Codebase Pre-indexing (92% token reduction)` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Raw Sources Directory` --semantically_similar_to--> `Raw Sources Layer`  [INFERRED] [semantically similar]
-  raw/README.md → raw/articles/2026-04-15-karpathy-llm-wiki.md
-- `Graphify Workflow` --semantically_similar_to--> `Ingest Operation`  [INFERRED] [semantically similar]
-  raw/README.md → raw/articles/2026-04-15-karpathy-llm-wiki.md
+- `Schema Layer (CLAUDE.md / AGENTS.md)` --semantically_similar_to--> `CLAUDE.md Optimization (200-line limit)`  [INFERRED] [semantically similar]
+  raw/articles/2026-04-15-karpathy-llm-wiki.md → raw/notes/2026-04-21-claude-code-토큰-사용량-90%-절감하는-3가지-실전-기법-(qmd,-3-에이전트).md
+- `qmd Codebase Pre-indexing (92% token reduction)` --semantically_similar_to--> `index.md (Wiki Content Catalog)`  [INFERRED] [semantically similar]
+  raw/notes/2026-04-21-claude-code-토큰-사용량-90%-절감하는-3가지-실전-기법-(qmd,-3-에이전트).md → raw/articles/2026-04-15-karpathy-llm-wiki.md
+- `Rationale: LLM Wiki vs RAG — incremental compilation` --semantically_similar_to--> `Rationale: Structural prevention over prompting`  [INFERRED] [semantically similar]
+  raw/articles/2026-04-15-karpathy-llm-wiki.md → raw/notes/2026-04-07-harness-engineering.md
+- `Context Corruption Problem (Long Sessions)` --semantically_similar_to--> `Session Management (/compact, /clear)`  [INFERRED] [semantically similar]
+  raw/notes/2026-04-07-harness-engineering.md → raw/notes/2026-04-21-claude-code-토큰-사용량-90%-절감하는-3가지-실전-기법-(qmd,-3-에이전트).md
+- `Harness Engineering` --semantically_similar_to--> `3-Agent Team Structure (Architect / Builder / Reviewer)`  [INFERRED] [semantically similar]
+  raw/notes/2026-04-07-harness-engineering.md → raw/notes/2026-04-21-claude-code-토큰-사용량-90%-절감하는-3가지-실전-기법-(qmd,-3-에이전트).md
 
 ## Hyperedges (group relationships)
-- **Three-Layer LLM Wiki Architecture** — llmwiki_raw_sources, llmwiki_wiki_layer, llmwiki_schema_layer [EXTRACTED 0.95]
-- **Core Wiki Operations** — llmwiki_ingest_operation, llmwiki_query_operation, llmwiki_lint_operation [EXTRACTED 0.95]
-- **하네스의 3대 구성 요소** — 하네스엔지니어링_context_file, 하네스엔지니어링_auto_enforcement_system, 하네스엔지니어링_garbage_collection [EXTRACTED 1.00]
-- **하네스 실무 적용 3단계** — 하네스엔지니어링_claude_md, 하네스엔지니어링_precommit_hook, 하네스엔지니어링_linter_test [EXTRACTED 1.00]
+- **Claude Code Token Optimization Triad: Ignore + CLAUDE.md + Session Management** — claude_token_claudeignore, claude_token_claude_md_optimization, claude_token_session_management [EXTRACTED 0.95]
+- **3-Agent Workflow Cycle: Architect → Builder → Reviewer** — claude_token_architect_role, claude_token_builder_role, claude_token_reviewer_role [EXTRACTED 1.00]
+- **Harness Engineering Three Components: Context File + Auto Enforcement + Garbage Collection** — harness_context_file, harness_auto_enforcement, harness_garbage_collection [EXTRACTED 1.00]
 
 ## Communities
 
-### Community 0 - "LLM Wiki & Obsidian Layer"
-Cohesion: 0.28
-Nodes (9): index.md (wiki index), Lint Operation, LLM Wiki, log.md (chronological log), Vannevar Bush Memex, Obsidian (PKM tool), Query Operation, Schema Layer (CLAUDE.md / AGENTS.md) (+1 more)
+### Community 0 - "Harness Engineering"
+Cohesion: 0.29
+Nodes (8): Auto Enforcement System (Linter + Tests), Context Corruption Problem (Long Sessions), Context File (agent.md / claude.md), Harness Engineering, Garbage Collection (Periodic Code Cleanup), Pre-commit Hook, Rationale: Structural prevention over prompting, Schema Layer (CLAUDE.md / AGENTS.md)
 
-### Community 1 - "AI Agent & Harness Engineering"
-Cohesion: 0.28
-Nodes (9): AI 에이전트 (AI Agent), claude.md / agent.md (온보딩 지침 파일), 컨텍스트 부패 (Context Corruption), 컨텍스트 파일 (Context File), 개발자 역할 변화 (Developer Role Change), 가비지 컬렉션 (Garbage Collection), 하네스 엔지니어링 (Harness Engineering), 프롬프트 엔지니어링 (Prompt Engineering) (+1 more)
+### Community 1 - "LLM Wiki Pattern"
+Cohesion: 0.29
+Nodes (7): Lint Operation, LLM Wiki Pattern, Vannevar Bush Memex (1945), Obsidian (Wiki IDE), Obsidian Web Clipper, RAG (Retrieval-Augmented Generation) Pattern, Rationale: LLMs eliminate wiki maintenance burden
 
-### Community 2 - "Source Ingestion Pipeline"
-Cohesion: 0.5
-Nodes (5): Ingest Operation, Raw Sources Layer, Graphify Workflow, Naming Convention, Raw Sources Directory
+### Community 2 - "Token Optimization Techniques"
+Cohesion: 0.29
+Nodes (7): CLAUDE.md Optimization (200-line limit), .claudeignore File (File Exclusion), Claude Code 토큰 절감 3가지 기법 (헤이제임스), qmd Codebase Pre-indexing (92% token reduction), Session Management (/compact, /clear), 5 Token Saving Rules for CLAUDE.md, qmd (Markdown Search Tool)
 
-### Community 3 - "Persistent Knowledge vs RAG"
+### Community 3 - "3-Agent Team Structure"
+Cohesion: 0.4
+Nodes (5): 3-Agent Team Structure (Architect / Builder / Reviewer), Architect Agent Role, Builder Agent Role, Reviewer Agent Role, three-man-team GitHub Repository (russelleNVy)
+
+### Community 4 - "Wiki Query & Navigation"
 Cohesion: 0.67
-Nodes (3): Compounding Knowledge, Persistent Wiki, RAG (Retrieval-Augmented Generation)
+Nodes (3): index.md (Wiki Content Catalog), Query Operation, Wiki Layer (LLM-maintained)
 
-### Community 4 - "Automated Quality Gates"
+### Community 5 - "Source Ingestion Pipeline"
 Cohesion: 0.67
-Nodes (3): 자동 강제 시스템 (Auto Enforcement System), 린터 / 테스트 자동화 (Linter & Test Automation), 프리커밋 훅 (Pre-commit Hook)
+Nodes (3): Ingest Operation, log.md (Append-only Operation Log), Raw Sources Layer
+
+### Community 6 - "Persistent Knowledge vs RAG"
+Cohesion: 1.0
+Nodes (2): Persistent Compounding Wiki Artifact, Rationale: LLM Wiki vs RAG — incremental compilation
 
 ## Knowledge Gaps
-- **12 isolated node(s):** `Naming Convention`, `Schema Layer (CLAUDE.md / AGENTS.md)`, `Lint Operation`, `log.md (chronological log)`, `Obsidian (PKM tool)` (+7 more)
+- **13 isolated node(s):** `Lint Operation`, `Obsidian (Wiki IDE)`, `Obsidian Web Clipper`, `RAG (Retrieval-Augmented Generation) Pattern`, `Vannevar Bush Memex (1945)` (+8 more)
   These have ≤1 connection - possible missing edges or undocumented components.
+- **Thin community `Persistent Knowledge vs RAG`** (2 nodes): `Persistent Compounding Wiki Artifact`, `Rationale: LLM Wiki vs RAG — incremental compilation`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `LLM Wiki` connect `LLM Wiki & Obsidian Layer` to `Source Ingestion Pipeline`, `Persistent Knowledge vs RAG`?**
-  _High betweenness centrality (0.264) - this node is a cross-community bridge._
-- **Why does `하네스 엔지니어링 (Harness Engineering)` connect `AI Agent & Harness Engineering` to `Automated Quality Gates`?**
-  _High betweenness centrality (0.128) - this node is a cross-community bridge._
-- **Why does `Raw Sources Layer` connect `Source Ingestion Pipeline` to `LLM Wiki & Obsidian Layer`?**
-  _High betweenness centrality (0.064) - this node is a cross-community bridge._
-- **What connects `Naming Convention`, `Schema Layer (CLAUDE.md / AGENTS.md)`, `Lint Operation` to the rest of the system?**
-  _12 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `LLM Wiki Pattern` connect `LLM Wiki Pattern` to `Harness Engineering`, `Token Optimization Techniques`, `Wiki Query & Navigation`, `Source Ingestion Pipeline`, `Persistent Knowledge vs RAG`?**
+  _High betweenness centrality (0.528) - this node is a cross-community bridge._
+- **Why does `Claude Code 토큰 절감 3가지 기법 (헤이제임스)` connect `Token Optimization Techniques` to `3-Agent Team Structure`?**
+  _High betweenness centrality (0.317) - this node is a cross-community bridge._
+- **Why does `Harness Engineering` connect `Harness Engineering` to `3-Agent Team Structure`?**
+  _High betweenness centrality (0.296) - this node is a cross-community bridge._
+- **What connects `Lint Operation`, `Obsidian (Wiki IDE)`, `Obsidian Web Clipper` to the rest of the system?**
+  _13 weakly-connected nodes found - possible documentation gaps or missing edges._

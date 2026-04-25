@@ -1,7 +1,12 @@
-# Obsidian
+# Obsidian (keep only essential config in git)
 .obsidian/workspace*
 .obsidian/cache
-.obsidian/plugins/*/data.json
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/*.json
+
+# Claude Code local settings
+.claude/
 
 # System
 .DS_Store
